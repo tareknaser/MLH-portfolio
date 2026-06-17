@@ -30,6 +30,12 @@ WORK = [
 ]
 
 
+EDUCATION = [
+    {"school": "Mansoura University", "degree": "Bachelor's Degree in Computer Engineering and Systems"},
+    {"school": "Simon Fraser University", "degree": "Master of Science in Computing Science"},
+]
+
+
 @app.context_processor
 def inject_pages():
     return {"pages": PAGES, "url": os.getenv("URL")}
@@ -42,7 +48,7 @@ def index():
 
 @app.route('/experience')
 def experience():
-    return render_template('experience.html', title="Experience", work=WORK)
+    return render_template('experience.html', title="Experience", work=WORK, education=EDUCATION)
 
 
 @app.route('/hobbies')
