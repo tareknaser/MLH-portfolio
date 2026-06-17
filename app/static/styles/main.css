@@ -13,40 +13,45 @@ body {
 
 .nav-bar {
     width: 100%;
-    display: inline-block;
     background-color: #1C539F;
     font-family: "Roboto", serif;
-    font-weight: 700 !important;
-    padding-top: 10px;
+    font-weight: 700;
 }
 
-.nav-content .logo-touch-target {
-    display: inline-flex;
-    height: 60%;
-    width: 350px;
-}
-
-.nav-content .nav-logo {
-    height: 60px;
-    margin: auto;
-}
-
-.nav-logo {
+.nav-content {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    gap: 24px;
+    padding: 16px 24px;
 }
 
-.nav-logo img {
-    width: 200px;
+.nav-content a {
+    color: white;
+    text-decoration: none;
 }
 
-.nav-content nav {
-    display: block;
-    width: 100%;
-    text-align: right;
-    padding-top: 0px;
-    padding-right: 0px;
+.nav-content a:hover {
+    text-decoration: underline;
+}
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.section {
+    margin: 30px 0;
+}
+
+.section .list {
+    line-height: 1.8;
+}
+
+.hobby img,
+.map {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
 
 .profile {
