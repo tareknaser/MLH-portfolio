@@ -14,6 +14,14 @@ PAGES = [
 ]
 
 
+ABOUT = (
+    "I'm Tarek, a software engineer and researcher based in Vancouver. My work sits at the "
+    "intersection of AI and systems software, with a focus on Rust, software security, and "
+    "developer tooling. I enjoy building practical tools, contributing to open source, and "
+    "exploring how AI can help solve challenging engineering problems."
+)
+
+
 @app.context_processor
 def inject_pages():
     return {"pages": PAGES, "url": os.getenv("URL")}
@@ -21,7 +29,7 @@ def inject_pages():
 
 @app.route('/')
 def index():
-    return render_template('index.html', title="Tarek Elsayed")
+    return render_template('index.html', title="Tarek Elsayed", about=ABOUT)
 
 
 @app.route('/experience')
