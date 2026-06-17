@@ -22,6 +22,14 @@ ABOUT = (
 )
 
 
+WORK = [
+    {"place": "Microsoft Research", "role": "Research Intern"},
+    {"place": "MLH @ Meta", "role": "Software Engineering Fellow"},
+    {"place": "Dell Technologies", "role": "Intern"},
+    {"place": "Vodafone", "role": "Intern"},
+]
+
+
 @app.context_processor
 def inject_pages():
     return {"pages": PAGES, "url": os.getenv("URL")}
@@ -34,7 +42,7 @@ def index():
 
 @app.route('/experience')
 def experience():
-    return render_template('experience.html', title="Experience")
+    return render_template('experience.html', title="Experience", work=WORK)
 
 
 @app.route('/hobbies')
